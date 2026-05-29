@@ -1,0 +1,329 @@
+\<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <title>Teen Mental Health & Social Media</title>
+  <link rel="stylesheet" href="css/teen.css">
+  <link rel="icon" type="image/x-icon" href="Images/logo.png">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav-container">
+    <a href="index.html" class="logo">MASOOMA RIZVI</a>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Masooma Rizvi _ Resume 2026 _ LinkedIn .pdf" target="_blank">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/masooma-r-2693ab368" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/msm-rzv" target="_blank">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- INTRO — same structure as LAFS -->
+  <section class="intro-section">
+    <div class="intro-text">
+      <p class="project-title">TEEN MENTAL HEALTH & SOCIAL MEDIA</p>
+      <p class="project-dates">MAY 2025</p>
+      <p class="project-description"><em>"An end-to-end data analysis of 1,200 teenagers examining how social media usage affects mental health, academic performance, and sleep."</em></p>
+
+      <p class="section-label">TOOLKIT</p>
+      <p class="toolkit">
+        PostgreSQL | data storage & querying<br>
+        Power BI | interactive dashboard & visualisation<br>
+        SQL | pattern analysis across 9 research questions
+      </p>
+
+      <p class="section-label">READ-TIME</p>
+      <p class="read-time">8 minutes</p>
+    </div>
+
+    <div class="intro-img">
+      <img src="Images/TeenMentalHealth.jpg"Teen Mental Health Dashboard">
+    </div>
+  </section>
+
+  <!-- PROBLEM STATEMENT -->
+  <div class="quote">
+    <p>Problem Statement</p>
+    "How does social media usage impact the development of teenagers, and what can schools and parents do about it?"
+  </div>
+
+  <!-- PROGRESS TRACKER -->
+  <div class="progress-tracker">
+    <div class="step active" id="step-overview"   data-label="Overview"></div>
+    <div class="step"        id="step-analysis"   data-label="Analysis"></div>
+    <div class="step"        id="step-dashboard"  data-label="Dashboard"></div>
+    <div class="step"        id="step-findings"   data-label="Findings"></div>
+    <div class="step"        id="step-recommendations" data-label="Recommendations"></div>
+  </div>
+
+  <!-- OVERVIEW -->
+  <hr class="section-divider">
+  <section id="overview" class="content-section">
+    <p class="section-tag">OVERVIEW</p>
+
+    <p>The dataset contains 1,200 student records across 13 variables covering social media habits, sleep, academic performance, physical activity, social interaction, and mental health indicators.</p>
+
+    <h2>The Average Teen in This Dataset</h2>
+    <div class="stats-grid">
+      <div class="stat-cell"><span class="stat-number">15.9</span><span class="stat-desc">Average Age</span></div>
+      <div class="stat-cell"><span class="stat-number">4.02h</span><span class="stat-desc">Social Media / Day</span></div>
+      <div class="stat-cell"><span class="stat-number">7.38h</span><span class="stat-desc">Sleep / Night</span></div>
+      <div class="stat-cell"><span class="stat-number">1.72h</span><span class="stat-desc">Screen Time Before Bed</span></div>
+      <div class="stat-cell"><span class="stat-number">3.91</span><span class="stat-desc">Average GPA / 4.0</span></div>
+      <div class="stat-cell"><span class="stat-number">17.6%</span><span class="stat-desc">Depression Rate</span></div>
+    </div>
+
+    <h2>Data Dictionary</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Column</th><th>Description</th><th>Scale</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="col-name">age</td><td>Age of the student</td><td>13 — 19</td></tr>
+        <tr><td class="col-name">gender</td><td>Gender of the student</td><td>Male / Female</td></tr>
+        <tr><td class="col-name">daily_social_media_hours</td><td>Hours spent on social media per day</td><td>Numeric (hours)</td></tr>
+        <tr><td class="col-name">platform_usage</td><td>Primary platform used</td><td>Instagram / TikTok / Both</td></tr>
+        <tr><td class="col-name">sleep_hours</td><td>Hours of sleep per night</td><td>Numeric (hours)</td></tr>
+        <tr><td class="col-name">screen_time_before_sleep</td><td>Hours of screen time before bed</td><td>Numeric (hours)</td></tr>
+        <tr><td class="col-name">academic_performance</td><td>Academic grade performance</td><td>GPA 0 — 4.0</td></tr>
+        <tr><td class="col-name">physical_activity</td><td>Hours of physical activity per day</td><td>Numeric (hours)</td></tr>
+        <tr><td class="col-name">social_interaction_level</td><td>Self-reported social interaction</td><td>Low / Medium / High</td></tr>
+        <tr><td class="col-name">stress_level</td><td>Self-reported stress rating</td><td>1 — 10</td></tr>
+        <tr><td class="col-name">anxiety_level</td><td>Self-reported anxiety rating</td><td>1 — 10</td></tr>
+        <tr><td class="col-name">addiction_level</td><td>Self-reported addiction rating</td><td>1 — 10</td></tr>
+        <tr><td class="col-name">depression_label</td><td>Depression indicator</td><td>0 = No, 1 = Yes</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ANALYSIS -->
+  <hr class="section-divider">
+  <section id="analysis" class="content-section">
+    <p class="section-tag">ANALYSIS</p>
+    <p>Nine SQL queries were run across four sections to uncover patterns between social media use and teen wellbeing.</p>
+
+    <div class="panels">
+
+      <div class="panel">
+        <div class="panel-number">01</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">5.52h</span>
+          <span class="panel-stat-label">avg daily usage at age 19<br>vs 2.61h at age 13</span>
+        </div>
+        <div class="panel-content">
+          <h2>Social Media Grows With Age</h2>
+          <p>Usage more than doubles from age 13 to 19. Depression rates follow the same curve — from 11% at 13 to 25.6% at 18.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-number">02</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">3.13</span>
+          <span class="panel-stat-label">avg anxiety — high users<br>vs 1.55 for low users</span>
+        </div>
+        <div class="panel-content">
+          <h2>Higher Usage = Higher Anxiety</h2>
+          <p>High users (5h+) score double the anxiety of low users and nearly double on addiction (5.85 vs 3.01). Consistent across every usage group.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-number">03</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">3.79</span>
+          <span class="panel-stat-label">avg GPA — high users<br>vs 3.99 for low users</span>
+        </div>
+        <div class="panel-content">
+          <h2>Grades Decline With Usage</h2>
+          <p>A 0.20 GPA gap between high and low users — gradual but consistent. Enough to affect grade boundaries or scholarship eligibility.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-number">04</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">1.49h</span>
+          <span class="panel-stat-label">sleep lost per night<br>heavy vs minimal screen users</span>
+        </div>
+        <div class="panel-content">
+          <h2>Screen Time Steals Sleep</h2>
+          <p>Heavy bedtime screen users sleep just 6.75h vs 8.24h for minimal users — well below the recommended 8–10 hours for teenagers.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-number">05</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">42.9%</span>
+          <span class="panel-stat-label">depression rate<br>high SM + poor sleep</span>
+        </div>
+        <div class="panel-content">
+          <h2>The Highest Risk Profile</h2>
+          <p>Teens combining 5h+ social media with under 6h sleep have a 42.9% depression rate — more than three times the 13.4% of teens with healthy habits.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <hr class="section-divider">
+  <section id="dashboard" class="content-section">
+    <p class="section-tag">DASHBOARD</p>
+    <p>The Power BI dashboard visualises the findings across three focused pages.</p>
+
+    <div class="dashboard-grid">
+
+      <div class="dashboard-item">
+        <img src="images/teen-dashboard-overview.jpg" alt="Dashboard Page 1">
+        <div class="dashboard-caption">
+          <span class="dashboard-caption-title">Page 1 — Overview</span>
+          <span class="dashboard-caption-fig">Figure 01</span>
+        </div>
+        <p class="dashboard-caption-desc">Social media hours, addiction, anxiety and depression all rise steadily with age.</p>
+      </div>
+
+      <div class="dashboard-item">
+        <img src="images/teen-dashboard-impact.jpg" alt="Dashboard Page 2">
+        <div class="dashboard-caption">
+          <span class="dashboard-caption-title">Page 2 — The Impact of Social Media</span>
+          <span class="dashboard-caption-fig">Figure 02</span>
+        </div>
+        <p class="dashboard-caption-desc">Higher social media use consistently produces worse outcomes across every metric measured.</p>
+      </div>
+
+      <div class="dashboard-item">
+        <img src="images/teen-dashboard-help.jpg" alt="Dashboard Page 3">
+        <div class="dashboard-caption">
+          <span class="dashboard-caption-title">Page 3 — What Can Help?</span>
+          <span class="dashboard-caption-fig">Figure 03</span>
+        </div>
+        <p class="dashboard-caption-desc">Improving sleep and increasing physical activity are the two strongest protective factors.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEY FINDINGS -->
+  <hr class="section-divider">
+  <section id="findings" class="content-section">
+    <p class="section-tag">KEY FINDINGS</p>
+
+    <div class="quotes">
+      <p>"Social media use, addiction, anxiety and depression all increase steadily with age — depression rates nearly triple from 13 to 18."</p>
+      <p>"High social media users have double the anxiety of low users — 3.13 vs 1.55 out of 10."</p>
+      <p>"Heavy screen time before bed costs teens 1.49 hours of sleep per night."</p>
+      <p>"Higher social media use is consistently associated with lower GPA — 3.79 vs 3.99 for low users."</p>
+      <p>"Poor sleep combined with high social media use produces a depression rate of 42.9% — more than three times the baseline."</p>
+      <p>"Regular exercise nearly halves the depression rate — from 29.7% to 15.1%."</p>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <hr class="section-divider">
+  <section id="recommendations" class="content-section">
+    <p class="section-tag">RECOMMENDATIONS</p>
+    <p>Three actionable interventions — with different approaches for younger and older teens.</p>
+
+    <div class="panels">
+
+      <div class="panel">
+        <div class="panel-number">01</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">↓ 2×</span>
+          <span class="panel-stat-label">anxiety reduction<br>low vs high usage</span>
+        </div>
+        <div class="panel-content">
+          <h2>Reduce Social Media Use</h2>
+          <ul>
+            <li>Phone-free school hours to cut daily usage at source</li>
+            <li>Parental screen time agreements — no screens after 9pm</li>
+            <li>For older teens: show them the data rather than imposing rules</li>
+            <li>Digital literacy classes — teach how apps are designed to be addictive</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-number">02</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">↓ 3×</span>
+          <span class="panel-stat-label">depression rate<br>healthy sleep habits</span>
+        </div>
+        <div class="panel-content">
+          <h2>Improve Sleep</h2>
+          <ul>
+            <li>No screens 1 hour before bed — directly closes the sleep gap</li>
+            <li>For younger teens: parental enforcement of consistent bedtimes</li>
+            <li>For older teens: frame sleep as a performance tool for grades and sport</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-number">03</div>
+        <div class="panel-stat">
+          <span class="panel-stat-number">↓ 49%</span>
+          <span class="panel-stat-label">depression rate<br>active vs inactive teens</span>
+        </div>
+        <div class="panel-content">
+          <h2>Increase Physical Activity</h2>
+          <ul>
+            <li>Mandatory daily PE in school schedules for younger teens</li>
+            <li>After-school sports and clubs — make it social for older teens</li>
+            <li>The single most measurable protective factor in the dataset</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="closing-box">
+      <span class="closing-box-label">Closing Note</span>
+      "No single intervention is sufficient. The highest-risk teens are struggling across multiple dimensions simultaneously. Addressing all three — social media, sleep, and exercise — together could meaningfully reduce the 42.9% depression rate seen in the highest-risk group."
+    </div>
+
+    <div class="buttons">
+      <a href="Teen_Mental_Health_Case_Study_Final.docx" target="_blank">Download Full Report</a>
+      <a href="https://github.com/msm-rzv" target="_blank">View SQL on GitHub</a>
+      <a href="#" target="_blank">View Power BI Dashboard</a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 | MASOOMA RIZVI PORTFOLIO.</p>
+  </footer>
+
+  <script>
+    // Progress tracker
+    const sections = ['overview','analysis','dashboard','findings','recommendations'];
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+          const step = document.getElementById('step-' + entry.target.id);
+          if (step) step.classList.add('active');
+        }
+      });
+    }, { threshold: 0.3 });
+    sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
+
+    // Panel scroll animations
+    const panelObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.panel, .dashboard-item').forEach(p => panelObserver.observe(p));
+  </script>
+
+</body>
+</html>
