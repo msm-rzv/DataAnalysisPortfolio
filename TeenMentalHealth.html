@@ -1,4 +1,4 @@
-\<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
   <title>Teen Mental Health & Social Media</title>
   <link rel="stylesheet" href="css/teen.css">
-  <link rel="icon" type="image/x-icon" href="Images/logo.png">
+  <link rel="icon" type="image/x-icon" href="images/Frame 3.png">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
     </nav>
   </header>
 
-  <!-- INTRO — same structure as LAFS -->
+  <!-- INTRO -->
   <section class="intro-section">
     <div class="intro-text">
       <p class="project-title">TEEN MENTAL HEALTH & SOCIAL MEDIA</p>
@@ -36,7 +36,7 @@
       <p class="toolkit">
         PostgreSQL | data storage & querying<br>
         Power BI | interactive dashboard & visualisation<br>
-        SQL | pattern analysis across 9 research questions
+        SQL | pattern analysis
       </p>
 
       <p class="section-label">READ-TIME</p>
@@ -44,7 +44,7 @@
     </div>
 
     <div class="intro-img">
-      <img src="Images/TeenMentalHealth.jpg"Teen Mental Health Dashboard">
+      <img src="Images/TeenMentalHealth.jpg" alt="Teen Mental Health Dashboard">
     </div>
   </section>
 
@@ -54,21 +54,12 @@
     "How does social media usage impact the development of teenagers, and what can schools and parents do about it?"
   </div>
 
-  <!-- PROGRESS TRACKER -->
-  <div class="progress-tracker">
-    <div class="step active" id="step-overview"   data-label="Overview"></div>
-    <div class="step"        id="step-analysis"   data-label="Analysis"></div>
-    <div class="step"        id="step-dashboard"  data-label="Dashboard"></div>
-    <div class="step"        id="step-findings"   data-label="Findings"></div>
-    <div class="step"        id="step-recommendations" data-label="Recommendations"></div>
-  </div>
-
   <!-- OVERVIEW -->
   <hr class="section-divider">
   <section id="overview" class="content-section">
     <p class="section-tag">OVERVIEW</p>
 
-    <p>The dataset contains 1,200 student records across 13 variables covering social media habits, sleep, academic performance, physical activity, social interaction, and mental health indicators.</p>
+    <p>The dataset contains 1,200 student records across 13 variables — covering social media habits, sleep, academic performance, physical activity, social interaction, and mental health indicators.</p>
 
     <h2>The Average Teen in This Dataset</h2>
     <div class="stats-grid">
@@ -103,71 +94,55 @@
     </table>
   </section>
 
-  <!-- ANALYSIS -->
+  <!-- THE IMPACT -->
   <hr class="section-divider">
   <section id="analysis" class="content-section">
-    <p class="section-tag">ANALYSIS</p>
-    <p>Nine SQL queries were run across four sections to uncover patterns between social media use and teen wellbeing.</p>
+    <p class="section-tag">THE IMPACT OF SOCIAL MEDIA</p>
+    <p>What the data shows about how social media affects teens across mental health, academic performance, and sleep.</p>
 
     <div class="panels">
 
       <div class="panel">
-        <div class="panel-number">01</div>
         <div class="panel-stat">
           <span class="panel-stat-number">5.52h</span>
           <span class="panel-stat-label">avg daily usage at age 19<br>vs 2.61h at age 13</span>
         </div>
         <div class="panel-content">
-          <h2>Social Media Grows With Age</h2>
-          <p>Usage more than doubles from age 13 to 19. Depression rates follow the same curve — from 11% at 13 to 25.6% at 18.</p>
+          <h2>Social Media & Mental Health</h2>
+          <p>Usage more than doubles from age 13 to 19. High users score double the anxiety of low users — 3.13 vs 1.55 — and nearly double on addiction. Depression rates climb from 11% at 13 to 25.6% at 18.</p>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-number">02</div>
-        <div class="panel-stat">
-          <span class="panel-stat-number">3.13</span>
-          <span class="panel-stat-label">avg anxiety — high users<br>vs 1.55 for low users</span>
-        </div>
-        <div class="panel-content">
-          <h2>Higher Usage = Higher Anxiety</h2>
-          <p>High users (5h+) score double the anxiety of low users and nearly double on addiction (5.85 vs 3.01). Consistent across every usage group.</p>
-        </div>
-      </div>
-
-      <div class="panel">
-        <div class="panel-number">03</div>
         <div class="panel-stat">
           <span class="panel-stat-number">3.79</span>
           <span class="panel-stat-label">avg GPA — high users<br>vs 3.99 for low users</span>
         </div>
         <div class="panel-content">
-          <h2>Grades Decline With Usage</h2>
-          <p>A 0.20 GPA gap between high and low users — gradual but consistent. Enough to affect grade boundaries or scholarship eligibility.</p>
+          <h2>Social Media & Academic Performance</h2>
+          <p>A consistent 0.20 GPA gap between high and low users — gradual but present across every usage group, enough to affect grade boundaries or scholarship eligibility.</p>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-number">04</div>
         <div class="panel-stat">
           <span class="panel-stat-number">1.49h</span>
           <span class="panel-stat-label">sleep lost per night<br>heavy vs minimal screen users</span>
         </div>
         <div class="panel-content">
-          <h2>Screen Time Steals Sleep</h2>
-          <p>Heavy bedtime screen users sleep just 6.75h vs 8.24h for minimal users — well below the recommended 8–10 hours for teenagers.</p>
+          <h2>Social Media & Sleep</h2>
+          <p>Heavy bedtime screen users sleep just 6.75h vs 8.24h for minimal users — well below the recommended 8–10 hours for teenagers. Every extra hour of screen time before bed has a measurable cost.</p>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-number">05</div>
         <div class="panel-stat">
           <span class="panel-stat-number">42.9%</span>
           <span class="panel-stat-label">depression rate<br>high SM + poor sleep</span>
         </div>
         <div class="panel-content">
           <h2>The Highest Risk Profile</h2>
-          <p>Teens combining 5h+ social media with under 6h sleep have a 42.9% depression rate — more than three times the 13.4% of teens with healthy habits.</p>
+          <p>Teens combining 5h+ of social media with under 6h of sleep have a depression rate of 42.9% — more than three times the 13.4% of teens with healthy habits. Poor sleep amplifies everything else.</p>
         </div>
       </div>
 
@@ -183,7 +158,7 @@
     <div class="dashboard-grid">
 
       <div class="dashboard-item">
-        <img src="images/teen-dashboard-overview.jpg" alt="Dashboard Page 1">
+        <img src="images/teen-figure-1.jpg" alt="Dashboard Page 1 — Overview">
         <div class="dashboard-caption">
           <span class="dashboard-caption-title">Page 1 — Overview</span>
           <span class="dashboard-caption-fig">Figure 01</span>
@@ -192,7 +167,7 @@
       </div>
 
       <div class="dashboard-item">
-        <img src="images/teen-dashboard-impact.jpg" alt="Dashboard Page 2">
+        <img src="images/teen-figure-2.jpg" alt="Dashboard Page 2 — Impact">
         <div class="dashboard-caption">
           <span class="dashboard-caption-title">Page 2 — The Impact of Social Media</span>
           <span class="dashboard-caption-fig">Figure 02</span>
@@ -201,7 +176,7 @@
       </div>
 
       <div class="dashboard-item">
-        <img src="images/teen-dashboard-help.jpg" alt="Dashboard Page 3">
+        <img src="images/teen-figure-3.jpg" alt="Dashboard Page 3 — What Can Help">
         <div class="dashboard-caption">
           <span class="dashboard-caption-title">Page 3 — What Can Help?</span>
           <span class="dashboard-caption-fig">Figure 03</span>
@@ -231,56 +206,40 @@
   <hr class="section-divider">
   <section id="recommendations" class="content-section">
     <p class="section-tag">RECOMMENDATIONS</p>
-    <p>Three actionable interventions — with different approaches for younger and older teens.</p>
+    <p>Three interventions supported directly by the data — with tailored approaches for different age groups.</p>
 
     <div class="panels">
 
       <div class="panel">
-        <div class="panel-number">01</div>
         <div class="panel-stat">
           <span class="panel-stat-number">↓ 2×</span>
           <span class="panel-stat-label">anxiety reduction<br>low vs high usage</span>
         </div>
         <div class="panel-content">
           <h2>Reduce Social Media Use</h2>
-          <ul>
-            <li>Phone-free school hours to cut daily usage at source</li>
-            <li>Parental screen time agreements — no screens after 9pm</li>
-            <li>For older teens: show them the data rather than imposing rules</li>
-            <li>Digital literacy classes — teach how apps are designed to be addictive</li>
-          </ul>
+          <p>Phone-free school hours and parental screen time agreements cut daily usage at source for younger teens. For older teens, showing them the data is more effective than rules — they respond to logic, not lectures. Digital literacy classes help both groups understand how apps are designed to maximise engagement.</p>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-number">02</div>
         <div class="panel-stat">
           <span class="panel-stat-number">↓ 3×</span>
-          <span class="panel-stat-label">depression rate<br>healthy sleep habits</span>
+          <span class="panel-stat-label">depression rate<br>with healthy sleep habits</span>
         </div>
         <div class="panel-content">
           <h2>Improve Sleep</h2>
-          <ul>
-            <li>No screens 1 hour before bed — directly closes the sleep gap</li>
-            <li>For younger teens: parental enforcement of consistent bedtimes</li>
-            <li>For older teens: frame sleep as a performance tool for grades and sport</li>
-          </ul>
+          <p>No screens 1 hour before bed directly closes the 1.49h sleep gap. For younger teens, consistent enforced bedtimes work best. For older teens, framing sleep as a performance tool for grades and sport lands better than any mental health argument.</p>
         </div>
       </div>
 
       <div class="panel">
-        <div class="panel-number">03</div>
         <div class="panel-stat">
           <span class="panel-stat-number">↓ 49%</span>
           <span class="panel-stat-label">depression rate<br>active vs inactive teens</span>
         </div>
         <div class="panel-content">
           <h2>Increase Physical Activity</h2>
-          <ul>
-            <li>Mandatory daily PE in school schedules for younger teens</li>
-            <li>After-school sports and clubs — make it social for older teens</li>
-            <li>The single most measurable protective factor in the dataset</li>
-          </ul>
+          <p>The single most measurable protective factor in the dataset — nearly halving depression risk. Mandatory daily PE works for younger teens. For older teens, making exercise social and competitive through after-school sports and clubs is far more effective than obligation.</p>
         </div>
       </div>
 
@@ -305,20 +264,6 @@
   </footer>
 
   <script>
-    // Progress tracker
-    const sections = ['overview','analysis','dashboard','findings','recommendations'];
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
-          const step = document.getElementById('step-' + entry.target.id);
-          if (step) step.classList.add('active');
-        }
-      });
-    }, { threshold: 0.3 });
-    sections.forEach(id => { const el = document.getElementById(id); if (el) observer.observe(el); });
-
-    // Panel scroll animations
     const panelObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
     }, { threshold: 0.15 });
