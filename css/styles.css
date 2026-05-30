@@ -182,6 +182,7 @@ body {
 .project title {
   margin-bottom: 0;
   font-size: 18px;
+  font-weight: 100;
 }
 /* ========== BUTTONS WITH SLIDE EFFECT (from lafs.css) ========== */
 .buttons {
