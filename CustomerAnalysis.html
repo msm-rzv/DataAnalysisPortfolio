@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
+  <title>Customer Shopping Behaviour</title>
+  <link rel="stylesheet" href="css/teen.css">
+  <link rel="icon" type="image/x-icon" href="images/Frame 3.png">
+</head>
+
+<body>
+
+  <!-- NAV -->
+  <header class="nav-container">
+    <a href="index.html" class="logo">MASOOMA RIZVI</a>
+    <nav class="nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Masooma Rizvi _ Resume 2026 _ LinkedIn .pdf" target="_blank">Resume</a></li>
+        <li><a href="https://www.linkedin.com/in/masooma-r-2693ab368" target="_blank">LinkedIn</a></li>
+        <li><a href="https://github.com/msm-rzv" target="_blank">Github</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- INTRO -->
+  <section class="intro-section">
+    <div class="intro-text">
+      <p class="project-title">CUSTOMER SHOPPING BEHAVIOUR</p>
+      <p class="project-dates">JUNE 2025</p>
+      <p class="project-description"><em>"A data analysis of 3,900 retail customers examining spending patterns, customer loyalty, product performance, and the impact of subscriptions and discounts on revenue."</em></p>
+
+      <p class="section-label">TOOLKIT</p>
+      <p class="toolkit">
+        PostgreSQL | data storage & querying<br>
+        Power BI | interactive dashboard & visualisation<br>
+        SQL | pattern analysis across 13 research questions
+      </p>
+
+      <p class="section-label">READ-TIME</p>
+      <p class="read-time">8 minutes</p>
+    </div>
+
+    <div class="intro-img">
+      <img src="Images/CustomerAnalysis.jpg" alt="Customer Shopping Dashboard">
+    </div>
+  </section>
+
+  <!-- PROBLEM STATEMENT -->
+  <div class="quote">
+    <p>Problem Statement</p>
+    "What are the key drivers of customer spending behaviour, and how can the business use purchase patterns, loyalty segmentation, and product performance to improve revenue and customer retention?"
+  </div>
+
+  <!-- OVERVIEW -->
+  <hr class="section-divider">
+  <section id="overview" class="content-section">
+    <p class="section-tag">OVERVIEW</p>
+
+    <p>The dataset contains 3,900 customer transaction records across 18 variables — covering demographics, purchase history, product preferences, shipping habits, subscription status, and review ratings.</p>
+
+    <h2>The Average Customer in This Dataset</h2>
+    <div class="stats-grid">
+      <div class="stat-cell"><span class="stat-number">3,900</span><span class="stat-desc">Total Customers</span></div>
+      <div class="stat-cell"><span class="stat-number">$59.76</span><span class="stat-desc">Avg Purchase Amount</span></div>
+      <div class="stat-cell"><span class="stat-number">3.75</span><span class="stat-desc">Avg Review Rating / 5</span></div>
+      <div class="stat-cell"><span class="stat-number">25.4</span><span class="stat-desc">Avg Previous Purchases</span></div>
+      <div class="stat-cell"><span class="stat-number">73%</span><span class="stat-desc">Non-Subscribed</span></div>
+      <div class="stat-cell"><span class="stat-number">79.9%</span><span class="stat-desc">Loyal Customers</span></div>
+    </div>
+
+    <h2>Data Dictionary</h2>
+    <table class="data-table">
+      <thead>
+        <tr><th>Column</th><th>Description</th><th>Scale</th></tr>
+      </thead>
+      <tbody>
+        <tr><td class="col-name">Customer ID</td><td>Unique identifier</td><td>Numeric</td></tr>
+        <tr><td class="col-name">Age</td><td>Age of the customer</td><td>18 — 70</td></tr>
+        <tr><td class="col-name">Gender</td><td>Gender</td><td>Male / Female</td></tr>
+        <tr><td class="col-name">Item Purchased</td><td>Product bought</td><td>25 unique items</td></tr>
+        <tr><td class="col-name">Category</td><td>Product category</td><td>Clothing / Accessories / Footwear / Outerwear</td></tr>
+        <tr><td class="col-name">Purchase Amount (USD)</td><td>Transaction value</td><td>$20 — $100</td></tr>
+        <tr><td class="col-name">Review Rating</td><td>Customer rating</td><td>2.5 — 5.0</td></tr>
+        <tr><td class="col-name">Subscription Status</td><td>Newsletter subscriber</td><td>Yes / No</td></tr>
+        <tr><td class="col-name">Shipping Type</td><td>Shipping method</td><td>6 types</td></tr>
+        <tr><td class="col-name">Discount Applied</td><td>Discount used on purchase</td><td>Yes / No</td></tr>
+        <tr><td class="col-name">Previous Purchases</td><td>Number of past purchases</td><td>1 — 50</td></tr>
+        <tr><td class="col-name">Payment Method</td><td>Method of payment</td><td>Multiple methods</td></tr>
+        <tr><td class="col-name">Frequency of Purchases</td><td>How often they shop</td><td>Weekly / Fortnightly / etc.</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- ANALYSIS -->
+  <hr class="section-divider">
+  <section id="analysis" class="content-section">
+    <p class="section-tag">KEY FINDINGS</p>
+    <p>Thirteen SQL queries across four sections uncovering patterns in revenue, products, loyalty, and spend behaviour.</p>
+
+    <div class="panels">
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">67.7%</span>
+          <span class="panel-stat-label">revenue from male customers<br>vs 32.3% female</span>
+        </div>
+        <div class="panel-content">
+          <h2>Revenue & Demographics</h2>
+          <p>Male customers generate $157,890 vs $75,191 for female customers — reflecting their larger share of the dataset (68% vs 32%) rather than higher individual spend. Revenue is almost evenly distributed across customers aged 25 and above, while Young Adults (18–24) contribute significantly less.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">$0.38</span>
+          <span class="panel-stat-label">difference in avg spend<br>subscribers vs non-subscribers</span>
+        </div>
+        <div class="panel-content">
+          <h2>Subscriptions Don't Drive Spend</h2>
+          <p>Subscribed customers average $59.49 per transaction vs $59.87 for non-subscribers — a negligible difference of $0.38. Subscription status alone does not predict higher individual spend, suggesting the business needs a stronger value proposition for its subscription programme.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">79.9%</span>
+          <span class="panel-stat-label">of customers are Loyal<br>only 2.1% are New</span>
+        </div>
+        <div class="panel-content">
+          <h2>High Retention, Low Acquisition</h2>
+          <p>3,116 of 3,900 customers (79.9%) have made more than 10 previous purchases — an exceptionally high loyalty rate. However only 83 customers (2.1%) are new, suggesting the business retains customers effectively but is struggling to attract new ones.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">72.4%</span>
+          <span class="panel-stat-label">of repeat buyers<br>are not subscribed</span>
+        </div>
+        <div class="panel-content">
+          <h2>The Subscription Gap</h2>
+          <p>Even among customers with more than 5 previous purchases, 2,518 out of 3,476 (72.4%) are not subscribed. Loyal customers who have clearly committed to the brand are not being converted to subscribers — a targeted campaign for this group could significantly grow the subscriber base.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">50.3%</span>
+          <span class="panel-stat-label">discount rate on Blouse<br>the top selling product</span>
+        </div>
+        <div class="panel-content">
+          <h2>Discounts Follow Popularity</h2>
+          <p>The five most discounted products are almost identical to the five most purchased products. Discounts are currently boosting already popular items rather than driving demand for underperformers like Jeans (124 orders, the least purchased product).</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- DASHBOARD -->
+  <hr class="section-divider">
+  <section id="dashboard" class="content-section">
+    <p class="section-tag">DASHBOARD</p>
+    <p>Three Power BI pages covering sales overview, customer loyalty, and product performance.</p>
+
+    <div class="dashboard-grid">
+
+      <div class="dashboard-item">
+        <img src="images/Customer_Analysis1.jpg" alt="Dashboard Page 1 — Sales Overview">
+        <div class="dashboard-caption">
+          <span class="dashboard-caption-title">Page 1 — Sales Overview</span>
+          <span class="dashboard-caption-fig">Figure 01</span>
+        </div>
+        <p class="dashboard-caption-desc">Total customers, average spend, revenue by category, subscription breakdown, and revenue by age group.</p>
+      </div>
+
+      <div class="dashboard-item">
+        <img src="images/Customer_Analysis2.jpg" alt="Dashboard Page 2 — Customer Loyalty">
+        <div class="dashboard-caption">
+          <span class="dashboard-caption-title">Page 2 — Customer Loyalty</span>
+          <span class="dashboard-caption-fig">Figure 02</span>
+        </div>
+        <p class="dashboard-caption-desc">Loyalty segmentation showing 79.9% loyal customers, subscription rates among repeat buyers, and spend by subscription status.</p>
+      </div>
+
+      <div class="dashboard-item">
+        <img src="images/Customer_Analysis3.jpg" alt="Dashboard Page 3 — Products and Sales Performance">
+        <div class="dashboard-caption">
+          <span class="dashboard-caption-title">Page 3 — Products & Sales Performance</span>
+          <span class="dashboard-caption-fig">Figure 03</span>
+        </div>
+        <p class="dashboard-caption-desc">Most and least popular products by volume, and revenue breakdown by category.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- KEY FINDINGS -->
+  <hr class="section-divider">
+  <section id="findings" class="content-section">
+    <p class="section-tag">INSIGHTS</p>
+
+    <div class="quotes">
+      <p>"Male customers account for 67.7% of revenue — reflecting customer base composition rather than higher individual spend."</p>
+      <p>"Subscribed and non-subscribed customers spend virtually the same per transaction — $59.49 vs $59.87."</p>
+      <p>"79.9% of customers are Loyal, but only 2.1% are New — strong retention, weak acquisition."</p>
+      <p>"72.4% of repeat buyers are not subscribed — the clearest conversion opportunity in the dataset."</p>
+      <p>"Gloves and Boots are among the least purchased products but have the highest satisfaction ratings."</p>
+      <p>"Discounts are concentrated on top sellers — not being used to boost underperforming products."</p>
+    </div>
+  </section>
+
+  <!-- RECOMMENDATIONS -->
+  <hr class="section-divider">
+  <section id="recommendations" class="content-section">
+    <p class="section-tag">RECOMMENDATIONS</p>
+    <p>Four data-driven actions the business can take based on these findings.</p>
+
+    <div class="panels">
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">2,518</span>
+          <span class="panel-stat-label">loyal non-subscribers<br>to target</span>
+        </div>
+        <div class="panel-content">
+          <h2>Launch a Subscription Conversion Campaign</h2>
+          <p>With 2,518 repeat buyers who are not subscribed, even a 20% conversion rate would nearly double the subscriber base. These customers have already demonstrated loyalty — they need a compelling reason to subscribe, not further convincing to shop.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">124</span>
+          <span class="panel-stat-label">orders for Jeans<br>the weakest performer</span>
+        </div>
+        <div class="panel-content">
+          <h2>Redirect Discount Strategy</h2>
+          <p>Discounts are currently concentrated on already top-selling products. Applying promotions to underperforming items like Jeans (124 orders) or Backpacks (143 orders) could help balance the product portfolio without cannibalising top-line revenue.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">2.1%</span>
+          <span class="panel-stat-label">of customers<br>are new</span>
+        </div>
+        <div class="panel-content">
+          <h2>Invest in New Customer Acquisition</h2>
+          <p>Only 83 out of 3,900 customers are new. The business retains customers exceptionally well but is not growing its base. Targeted campaigns aimed at the 18–24 demographic — which currently contributes the least revenue — could open a new acquisition channel.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">3.86</span>
+          <span class="panel-stat-label">avg rating for Gloves<br>least purchased top-rated item</span>
+        </div>
+        <div class="panel-content">
+          <h2>Promote High-Rated Low-Volume Products</h2>
+          <p>Gloves and Boots have the highest customer satisfaction scores in the dataset but sit among the least purchased products. Increased product visibility, bundling, or seasonal campaigns could convert strong satisfaction into stronger sales volume.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="closing-box">
+      <span class="closing-box-label">Closing Note</span>
+      "This business has an exceptionally loyal customer base but faces two structural challenges: low new customer acquisition and a large pool of loyal non-subscribers. Addressing these two gaps — through targeted acquisition and a subscription conversion campaign — represents the clearest path to sustainable revenue growth."
+    </div>
+
+    <div class="buttons">
+      <a href="index.html">Home</a>
+      <a href="Customer_Shopping_Behaviour_Case_Study.pdf" target="_blank">Download Full Report</a>
+      <a href="https://github.com/msm-rzv" target="_blank">View on GitHub</a>
+    </div>
+
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <p>&copy; 2025 | MASOOMA RIZVI PORTFOLIO.</p>
+  </footer>
+
+  <script>
+    const panelObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.15 });
+    document.querySelectorAll('.panel, .dashboard-item').forEach(p => panelObserver.observe(p));
+  </script>
+
+</body>
+</html>
