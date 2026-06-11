@@ -7,7 +7,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400&family=Cormorant+Garamond:wght@400;700&display=swap" rel="stylesheet">
   <title>Customer Shopping Behaviour</title>
   <link rel="stylesheet" href="css/teen.css">
-  <link rel="icon" type="image/x-icon" href="images/Frame 3.png">
+  <link rel="icon" type="image/x-icon" href="images/logo.png">
 </head>
 
 <body>
@@ -34,9 +34,10 @@
 
       <p class="section-label">TOOLKIT</p>
       <p class="toolkit">
+        Python | data cleaning & feature engineering<br>
         PostgreSQL | data storage & querying<br>
-        Power BI | interactive dashboard & visualisation<br>
-        SQL | pattern analysis across 13 research questions
+        Power BI | dashboard & visualisation<br>
+        SQL | pattern analysis 
       </p>
 
       <p class="section-label">READ-TIME</p>
@@ -44,7 +45,7 @@
     </div>
 
     <div class="intro-img">
-      <img src="Images/CustomerAnalysis.jpg" alt="Customer Shopping Dashboard">
+      <img src="images/CustomerAnalysis.jpg" alt="Customer Shopping Dashboard">
     </div>
   </section>
 
@@ -94,7 +95,49 @@
     </table>
   </section>
 
-  <!-- ANALYSIS -->
+  <!-- DATA CLEANING -->
+  <hr class="section-divider">
+  <section class="content-section">
+    <p class="section-tag">DATA CLEANING</p>
+    <p>Before loading into PostgreSQL, the raw dataset was cleaned using Python. Six steps were applied to ensure the data was analysis-ready.</p>
+
+    <div class="panels">
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">37</span>
+          <span class="panel-stat-label">missing Review Rating<br>values imputed</span>
+        </div>
+        <div class="panel-content">
+          <h2>Missing Value Imputation</h2>
+          <p>Null Review Ratings were filled using the median rating within each product category — preserving category-level patterns rather than applying a single global median across all products.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">100%</span>
+          <span class="panel-stat-label">match between<br>promo_code_used & discount_applied</span>
+        </div>
+        <div class="panel-content">
+          <h2>Redundant Column Removed</h2>
+          <p>The <code>promo_code_used</code> column was found to be 100% identical to <code>discount_applied</code> across all 3,900 rows. It was confirmed redundant and dropped before loading to PostgreSQL.</p>
+        </div>
+      </div>
+
+      <div class="panel">
+        <div class="panel-stat">
+          <span class="panel-stat-number">2</span>
+          <span class="panel-stat-label">new features<br>engineered</span>
+        </div>
+        <div class="panel-content">
+          <h2>Feature Engineering</h2>
+          <p>Two new columns were created — <code>age_group</code> using quartile-based age bands (Young Adult, Adult, Middle-aged, Senior), and <code>purchase_frequency_days</code> mapping text frequency labels to numeric days for quantitative analysis.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
   <hr class="section-divider">
   <section id="analysis" class="content-section">
     <p class="section-tag">KEY FINDINGS</p>
@@ -282,7 +325,7 @@
 
   <!-- FOOTER -->
   <footer class="site-footer">
-    <p>&copy; 2025 | MASOOMA RIZVI PORTFOLIO.</p>
+    <p>&copy; 2026 | MASOOMA RIZVI PORTFOLIO.</p>
   </footer>
 
   <script>
